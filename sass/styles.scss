@@ -43,7 +43,9 @@ body {
 
 
 .piczag-logo {
-  margin-bottom: -35px;
+  display: block;
+  width: 82%;
+  margin: -31px auto 0;
 }
 .iphone {
   width: 200px;
@@ -203,6 +205,12 @@ body {
   }
 }
 
+
+@media (min-width: 855px) {
+  .piczag-logo {
+    margin: -30px auto -36px;
+  }
+}
 
 @media (max-width: 480px) {
   .content {
