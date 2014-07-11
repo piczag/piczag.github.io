@@ -8,8 +8,7 @@
     <meta name="viewport" content="width=device-width" />
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/styles.css">
-    <link href='http://fonts.googleapis.com/css?family=Pathway+Gothic+One' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Metrophobic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
     
     <title>Piczag</title>
     
@@ -18,18 +17,60 @@
     <meta property="og:site_name" content="PicZag" />
     <meta property="og:url" content="natalieweesh.github.io/piczag-landing/" />
     <meta property="og:image" content="https://launchrock-assets.s3.amazonaws.com/facebook-files/I6PX5G4F_1394893734730.jpg?_=0" />
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <link href="stylesheets/jquery.fancybox.css" rel="stylesheet">
   </head>
 
   <body>
     <div class="content">
-      <p>SIGN UP FOR COVERAGE:</p>
-      <!-- Begin LaunchRock Widget -->
-      <div id="lr-widget" rel="I6PX5G4F"></div>
-      <!-- End LaunchRock Widget -->
+
+      <div class="slide first-slide">
+        <div class="restrict-width">
+          <div class="content">
+            <img class="piczag-logo" src="images/logo_1.png" alt="collaborative photo messaging app">
+            
+            <!-- Begin LaunchRock Widget -->
+            <div id="lr-widget" rel="I6PX5G4F"></div>
+            <!-- End LaunchRock Widget -->
+            <h2>Your photo is your message.</h2>
+            <h2 class="yellow">Come hang with us.</h2>
+            <div class="social-icons">
+              <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+              <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
+              <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+              <a href="#"><img src="images/pinterest.png" alt="Pinterest"></a>
+              <a href="#"><img src="images/tumblr.png" alt="Tumblr"></a>
+            </div>
+          </div>
+          
+          <div class="iphone">
+            <img class="zag-icon" src="images/zag_icon.png">
+            <a class="play-button fancybox" href="images/Zag_Commercial.mp4" target="_blank"><img src="images/play-button.png"></a>
+            <img src="images/iphone.png" alt="discover photos, make edits, share with friends">
+            <div class="big-screen">
+              <img src="images/screenshot-23.png">
+            </div>
+          </div>
+
+        </div>
+      </div>
+
     </div>
     
     <script type="text/javascript" src="http://ignition.launchrock.com/ignition-current.min.js"></script>
-    
+    <script src="js/jquery.fancybox.js"></script>
+    <script src="js/jquery.fancybox-media.js"></script>
+    <script>
+    $(document).ready(function(){
 
+      $('.fancybox').fancybox({
+        type: 'iframe',
+        padding: 0,
+        helpers: {
+            media: {}
+        }
+      });
+    });
+    </script>
   </body>
 </html>
