@@ -170,6 +170,7 @@ body {
       filter: alpha(opacity=90);
       opacity: 0.9;
     }
+
   }
 }
 
@@ -212,6 +213,53 @@ body {
   }
 }
 
+@media (max-width: 608px) {
+  html {
+    height: auto;
+    width: auto;
+  }
+  .piczag-logo {
+    width: 95%;
+  }
+  .first-slide {
+    .content {
+      display: block;
+      width: 90%;
+      padding: 0;
+      margin: 0 auto;
+    }
+    .iphone {
+      position: relative;
+      margin: 2em auto;
+      width: 80%;
+    }
+    &>.restrict-width {
+      padding-bottom: 17em;
+      padding-top: 3em;
+    }
+    h2 {
+      padding: 1em 0 0;
+      &.yellow {
+        position: absolute;
+        bottom: 4em;
+        width: 90%;
+      }
+    }
+  }
+
+  .social-icons {
+    position: absolute;
+    bottom: 0;
+    width: 90%;
+  }
+  #lr-widget {
+    margin: 0 auto 5em;
+    position: absolute;
+    bottom: 11em;
+    width: 90%;
+  }
+}
+
 @media (max-width: 480px) {
   .content {
     top: 25px;
@@ -226,9 +274,8 @@ body {
   }
 
   #lr-widget {
-    margin: 0 auto 2.5em;
     input[type="email"].LR-sign-up-input {
-      width: 65% !important;
+      width: 80% !important;
       padding: 8px !important;
       font-size: 13px;
     }

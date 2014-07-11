@@ -206,52 +206,108 @@ body {
   opacity: 0.9;
 }
 
-/* line 176, ../sass/styles.scss */
+/* line 177, ../sass/styles.scss */
 .content {
   height: 100%;
 }
-/* line 178, ../sass/styles.scss */
+/* line 179, ../sass/styles.scss */
 .content h1 {
   line-height: 1em;
   margin-top: 0;
 }
-/* line 182, ../sass/styles.scss */
+/* line 183, ../sass/styles.scss */
 .content p {
   margin: 1em auto;
 }
 
-/* line 189, ../sass/styles.scss */
+/* line 190, ../sass/styles.scss */
 #lr-widget {
   width: 100%;
   margin: 0 auto 6em;
   position: relative;
 }
-/* line 193, ../sass/styles.scss */
+/* line 194, ../sass/styles.scss */
 #lr-widget .LR-content {
   max-width: 100% !important;
 }
-/* line 196, ../sass/styles.scss */
+/* line 197, ../sass/styles.scss */
 #lr-widget .LR-box-wrapper {
   width: 90% !important;
   margin: 0 auto !important;
 }
-/* line 200, ../sass/styles.scss */
+/* line 201, ../sass/styles.scss */
 #lr-widget input[type="email"].LR-sign-up-input {
   width: 75% !important;
 }
-/* line 203, ../sass/styles.scss */
+/* line 204, ../sass/styles.scss */
 #lr-widget input[type="submit"].LR-sign-up-submit {
   position: absolute;
 }
 
 @media (min-width: 855px) {
-  /* line 210, ../sass/styles.scss */
+  /* line 211, ../sass/styles.scss */
   .piczag-logo {
     margin: -30px auto -36px;
   }
 }
+@media (max-width: 608px) {
+  /* line 217, ../sass/styles.scss */
+  html {
+    height: auto;
+    width: auto;
+  }
+
+  /* line 221, ../sass/styles.scss */
+  .piczag-logo {
+    width: 95%;
+  }
+
+  /* line 225, ../sass/styles.scss */
+  .first-slide .content {
+    display: block;
+    width: 90%;
+    padding: 0;
+    margin: 0 auto;
+  }
+  /* line 231, ../sass/styles.scss */
+  .first-slide .iphone {
+    position: relative;
+    margin: 2em auto;
+    width: 80%;
+  }
+  /* line 236, ../sass/styles.scss */
+  .first-slide > .restrict-width {
+    padding-bottom: 17em;
+    padding-top: 3em;
+  }
+  /* line 240, ../sass/styles.scss */
+  .first-slide h2 {
+    padding: 1em 0 0;
+  }
+  /* line 242, ../sass/styles.scss */
+  .first-slide h2.yellow {
+    position: absolute;
+    bottom: 4em;
+    width: 90%;
+  }
+
+  /* line 250, ../sass/styles.scss */
+  .social-icons {
+    position: absolute;
+    bottom: 0;
+    width: 90%;
+  }
+
+  /* line 255, ../sass/styles.scss */
+  #lr-widget {
+    margin: 0 auto 5em;
+    position: absolute;
+    bottom: 11em;
+    width: 90%;
+  }
+}
 @media (max-width: 480px) {
-  /* line 216, ../sass/styles.scss */
+  /* line 264, ../sass/styles.scss */
   .content {
     top: 25px;
     margin-right: 0;
@@ -259,23 +315,19 @@ body {
     margin-top: 0;
     min-width: 150px;
   }
-  /* line 222, ../sass/styles.scss */
+  /* line 270, ../sass/styles.scss */
   .content p {
     font-size: 18px;
     margin: 0.5em auto;
   }
 
-  /* line 228, ../sass/styles.scss */
-  #lr-widget {
-    margin: 0 auto 2.5em;
-  }
-  /* line 230, ../sass/styles.scss */
+  /* line 277, ../sass/styles.scss */
   #lr-widget input[type="email"].LR-sign-up-input {
-    width: 65% !important;
+    width: 80% !important;
     padding: 8px !important;
     font-size: 13px;
   }
-  /* line 235, ../sass/styles.scss */
+  /* line 282, ../sass/styles.scss */
   #lr-widget input[type="submit"].LR-sign-up-submit {
     font-size: 13px;
     min-width: 40px;
