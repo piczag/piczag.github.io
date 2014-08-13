@@ -1,76 +1,428 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Zag: combining photos and messages into one effortless platform. Collaborate with friends to create and re-create memories, art, and fun!" />
-    <meta name="viewport" content="width=device-width" />
-
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/styles.css">
-    <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
-    <link rel="icon" type="image/png" href="images/favicon.png">
-    <title>Zag</title>
+<head>
+  <script src="js/jquery-1.11.0.min.js"></script>
+  <script src="js/lightbox.min.js"></script>
+  <script src="js/jquery.fancybox.js"></script>
+  <script src="js/jquery.fancybox-media.js"></script>
+  <script src="js/script.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+  <link href="css/lightbox.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+  <link href="css/lightbox-styles.css" rel="stylesheet">
+  <link href="css/jquery.fancybox.css" rel="stylesheet">
+  <link href="css/animate.min.css" rel="stylesheet">
+  <title>Zag</title>
+  <meta name="description" content="Zag: combining photos and messages into one effortless platform. Collaborate with friends to create and re-create memories, art, and fun!" />
+</head>
+<body>
+  <div class="slide-indicators">
     
-    <meta property="og:title" content="PicZag" />
-    <meta property="og:type" content="company" />
-    <meta property="og:site_name" content="PicZag" />
-    <meta property="og:url" content="natalieweesh.github.io/piczag-landing/" />
-    <meta property="og:image" content="https://launchrock-assets.s3.amazonaws.com/facebook-files/I6PX5G4F_1394893734730.jpg?_=0" />
-    <script src="js/jquery-1.11.0.min.js"></script>
-    <link href="stylesheets/jquery.fancybox.css" rel="stylesheet">
-  </head>
+    <div class="dots">
+      <a></a>
+      <a></a>
+      <a></a>
+      <a></a>
+      <a></a>
+    </div>
+  
+  </div>
+  <div class="slide first-slide">
+    <div class="restrict-width">
+      <div class="content">
+        <img class="logo" src="img/logo_1.png" alt="collaborative photo messaging app">
+        <h2>Your picture is your message.</h2>
 
-  <body>
-    <div class="content">
-
-      <div class="slide first-slide">
-        <div class="restrict-width">
-          <div class="content">
-            <img class="piczag-logo" src="images/logo_1.png" alt="collaborative photo messaging app">
-            
-            <!-- Begin LaunchRock Widget -->
-            <div id="lr-widget" rel="I6PX5G4F"></div>
-            <!-- End LaunchRock Widget -->
-            <h2>Your picture is your message.</h2>
-            <h2 class="yellow">Come hang with us.</h2>
-            <div class="social-icons">
-              <a href="http://instagram.com/zagapp" target="_blank"><img src="images/instagram.png" alt="Instagram"></a>
-              <a href="https://twitter.com/zagapp" target="_blank"><img src="images/twitter.png" alt="Twitter"></a>
-              <a href="https://www.facebook.com/zagapp" target="_blank"><img src="images/facebook.png" alt="Facebook"></a>
-              <a href="http://www.pinterest.com/zagapp/" target="_blank"><img src="images/pinterest.png" alt="Pinterest"></a>
-              <a href="http://zagapp.tumblr.com/" target="_blank"><img src="images/tumblr.png" alt="Tumblr"></a>
-            </div>
-          </div>
-          
-          <div class="iphone">
-            <img class="zag-icon" src="images/zag_icon.png">
-            <a class="play-button fancybox" href="images/Zag_Commercial.mp4" target="_blank"><img src="images/play-button.png"></a>
-            <img src="images/iphone.png" alt="discover photos, make edits, share with friends">
-            <div class="big-screen">
-              <img src="images/screenshot-23.png">
-            </div>
-          </div>
-
+        <a href="https://itunes.apple.com/us/app/zag-edit-photos-with-friends/id891439625?mt=8" class="download-link"><img src="img/download.png" alt="Download on the App Store"></a>
+      </div>
+      
+      <div class="iphone">
+        <img class="zag-icon" src="img/zag_icon.png">
+        <a class="play-button fancybox" href="img/Zag_Commercial.mp4" target="_blank"><img src="img/play-button.png"></a>
+        <img src="img/iphone.png" alt="discover photos, make edits, share with friends">
+        <div class="big-screen">
+          <img src="img/screenshot-23.png">
+          <!--
+          <img src="img/screenshot-01.png">
+          <img src="img/screenshot-02.png">
+          <img src="img/screenshot-03.png">
+          <img src="img/screenshot-11.png">
+          <img src="img/screenshot-12.png">
+          -->
         </div>
       </div>
+      <div class="bottom-bar">
+        <a href="http://zagapp.tumblr.com/">Zagnation</a>
+        <a href="http://zagmycampus.wordpress.com/author/piczag/">Zag Ambassadors</a>
+        <a href="http://www.fastcompany.com/3033871/zag-turns-your-photos-into-conversations#2">Press</a>
+        <a href="mailto:team@piczag.com">Contact Us</a>
+      </div>
+    </div>
+  </div>
+  <div class="slide second-slide">
+    <div class="restrict-width">
+      <!--
+      <div class="iphone">
+        <img src="img/iphone.png">
+        <div class="screen">
+          <img src="img/screenshot-01.png">
+          <img src="img/screenshot-02.png">
+          <img src="img/screenshot-03.png">
+        </div>
+      </div>
+      -->
+    </div>
+    <!--
+    <div class="black-band">
+      <div class="restrict-width">
+        <table>
+          <tr>
+            <td>
+              <h2>Take your pic</h2>
+              <p>Snap a shot or choose a photo from your camera roll or Facebook</p>
+            </td>
+            <td>
+              <img src="img/camera.png" class="icon">
+            </td>
+          </tr>
+        </table>
+        
+      </div>
+    </div>
+    -->
+  </div>
+  <div class="slide third-slide">
+    <div class="restrict-width">
+      <!--
+      <div class="iphone">
+        <img src="img/iphone.png">
+        <div class="screen">
+          <img src="img/screenshot-01.png">
+          <img src="img/screenshot-02.png">
+          <img src="img/screenshot-03.png">
+        </div>
+      </div>
+      -->
+    </div>
+    <!--
+    <div class="black-band">
+      <div class="restrict-width">
+        <table class="left">
+          <tr>
+            <td>
+              <img src="img/pencil.png" class="icon">
+            </td>
+            <td>
+              
+              <h2 class="yellow">Add your flare</h2>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img src="img/collage.png" class="icon">
+            </td>
+            <td>
+              <p>Edit and collage to create your own masterpiece</p>
+            </td>
+          </tr>
+        </table>
+        <table class="right">
+          <tr>
+            <td>
+              <h2 class="yellow">Remix with friends</h2>
+            </td>
+            <td>
+              <img src="img/lightning.png" class="icon">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Send your photo and let the creativity flow</p>
+            </td>
+            <td>
+              <img src="img/people.png" class="icon">
+            </td>
+          </tr>
+        </table>
+        
+        
+      </div>
+    </div>
+    -->
+  </div>
+  <div class="slide image-gallery-slide">
+    <div class="restrict-width">
+      <div class="main-iphone">
+        <img src="img/iphone.png" alt="discover photos, make edits, share with friends">
+        <div class="screen screen-2">
+          <img src="img/screenshot-01.png">
+          <img src="img/screenshot-02.png">
+          <img src="img/screenshot-03.png">
+        </div>
+        <div class="screen screen-3">
+          <img src="img/screenshot-11.png">
+          <img src="img/screenshot-12.png">
+          <img src="img/screenshot-13.png">
+        </div>
+        <div class="screen screen-4">
+          <img src="img/screenshot-21.png">
+          <img src="img/screenshot-22.png">
+          <img src="img/screenshot-23.png">
+        </div>
+      </div>
+      <!--
+      <div class="iphone">
+        <img src="img/iphone.png" alt="discover photos, make edits, share with friends">
+        <div class="screen">
+          <img src="img/screenshot-21.png">
+          <img src="img/screenshot-22.png">
+          <img src="img/screenshot-23.png">
+        </div>
+      </div>
+      -->
+    </div>
+    <div class="gallery clearfix">
+      <a href="img/hof/IMG_4342.JPG" style="background-image: url(img/hof/IMG_4342.JPG)" data-lightbox="gallery">
+        
+      </a>
+      <a href="img/hof/IMG_4343.JPG" style="background-image: url(img/hof/IMG_4343.JPG)" data-lightbox="gallery">
+        
+      </a>
+      <a href="img/hof/IMG_4344.JPG" style="background-image: url(img/hof/IMG_4344.JPG)" data-lightbox="gallery">
+        
+      </a>
+      <a href="img/hof/IMG_4347.JPG" style="background-image: url(img/hof/IMG_4347.JPG)" data-lightbox="gallery">
+        
+      </a>
+      <a href="img/hof/IMG_4348.JPG" style="background-image: url(img/hof/IMG_4348.JPG)" data-lightbox="gallery">
+        
+      </a>
+      <a href="img/hof/IMG_4349.JPG" style="background-image: url(img/hof/IMG_4349.JPG)" data-lightbox="gallery">
+        
+      </a>
+      <a href="img/hof/IMG_4350.JPG" style="background-image: url(img/hof/IMG_4350.JPG)" data-lightbox="gallery">
+        
+      </a>
+      <a href="img/hof/IMG_4351.JPG" style="background-image: url(img/hof/IMG_4351.JPG)" data-lightbox="gallery">
+        
+      </a>
+      <a href="img/hof/IMG_4352.JPG" style="background-image: url(img/hof/IMG_4352.JPG)" data-lightbox="gallery">
+        
+      </a>
+      <a href="img/hof/IMG_4353.JPG" style="background-image: url(img/hof/IMG_4353.JPG)" data-lightbox="gallery">
+        
+      </a>
+      <a href="img/hof/IMG_4354.JPG" style="background-image: url(img/hof/IMG_4354.JPG)" data-lightbox="gallery">
+        
+      </a>
+      <a href="img/hof/IMG_4356.JPG" style="background-image: url(img/hof/IMG_4356.JPG)" data-lightbox="gallery">
+        
+      </a>
+      <a href="img/hof/IMG_4357.JPG" style="background-image: url(img/hof/IMG_4357.JPG)" data-lightbox="gallery">
+        
+      </a>
+      <a href="img/hof/IMG_4358.JPG" style="background-image: url(img/hof/IMG_4358.JPG)" data-lightbox="gallery">
+        
+      </a>
+      <a href="img/hof/IMG_4369.JPG" style="background-image: url(img/hof/IMG_4369.JPG)" data-lightbox="gallery">
+        
+      </a>
+      <a href="img/hof/IMG_4370.JPG" style="background-image: url(img/hof/IMG_4370.JPG)" data-lightbox="gallery">
+        
+      </a>
+      <a href="img/hof/IMG_4371.JPG" style="background-image: url(img/hof/IMG_4371.JPG)" data-lightbox="gallery">
+        
+      </a>
+      <a href="img/hof/IMG_4372.JPG" style="background-image: url(img/hof/IMG_4372.JPG)" data-lightbox="gallery">
+        
+      </a>
+      <a href="img/hof/IMG_4373.JPG" style="background-image: url(img/hof/IMG_4373.JPG)" data-lightbox="gallery">
+        
+      </a>
+      <a href="img/hof/IMG_4375.JPG" style="background-image: url(img/hof/IMG_4375.JPG)" data-lightbox="gallery">
+        
+      </a>
+      <a href="img/hof/IMG_4376.JPG" style="background-image: url(img/hof/IMG_4376.JPG)" data-lightbox="gallery">
+        
+      </a>
+      <a href="img/hof/IMG_4377.JPG" style="background-image: url(img/hof/IMG_4377.JPG)" data-lightbox="gallery">
+        
+      </a>
+      <a href="img/hof/IMG_4378.JPG" style="background-image: url(img/hof/IMG_4378.JPG)" data-lightbox="gallery">
+        
+      </a>
+      <a href="img/hof/IMG_4379.JPG" style="background-image: url(img/hof/IMG_4379.JPG)" data-lightbox="gallery">
+        
+      </a>
+      <a href="img/hof/IMG_4381.JPG" style="background-image: url(img/hof/IMG_4381.JPG)" data-lightbox="gallery">
+        
+      </a>
+      <a href="img/hof/IMG_4382.JPG" style="background-image: url(img/hof/IMG_4382.JPG)" data-lightbox="gallery">
+        
+      </a>
+      <a href="img/hof/IMG_4383.JPG" style="background-image: url(img/hof/IMG_4383.JPG)" data-lightbox="gallery">
+        
+      </a>
+      <a href="img/hof/IMG_4384.JPG" style="background-image: url(img/hof/IMG_4384.JPG)" data-lightbox="gallery">
+        
+      </a>
+      <!-- double the images -->
+      <a href="img/hof/IMG_4342.JPG" style="background-image: url(img/hof/IMG_4342.JPG)" data-lightbox="gallery">
+        
+      </a>
+      <a href="img/hof/IMG_4343.JPG" style="background-image: url(img/hof/IMG_4343.JPG)" data-lightbox="gallery">
+        
+      </a>
+      <a href="img/hof/IMG_4344.JPG" style="background-image: url(img/hof/IMG_4344.JPG)" data-lightbox="gallery">
+        
+      </a>
+      <a href="img/hof/IMG_4347.JPG" style="background-image: url(img/hof/IMG_4347.JPG)" data-lightbox="gallery">
+        
+      </a>
+      <a href="img/hof/IMG_4348.JPG" style="background-image: url(img/hof/IMG_4348.JPG)" data-lightbox="gallery">
+        
+      </a>
+      <a href="img/hof/IMG_4349.JPG" style="background-image: url(img/hof/IMG_4349.JPG)" data-lightbox="gallery">
+        
+      </a>
+      <a href="img/hof/IMG_4350.JPG" style="background-image: url(img/hof/IMG_4350.JPG)" data-lightbox="gallery">
+        
+      </a>
+      <a href="img/hof/IMG_4351.JPG" style="background-image: url(img/hof/IMG_4351.JPG)" data-lightbox="gallery">
+        
+      </a>
+      <a href="img/hof/IMG_4352.JPG" style="background-image: url(img/hof/IMG_4352.JPG)" data-lightbox="gallery">
+        
+      </a>
+      <a href="img/hof/IMG_4353.JPG" style="background-image: url(img/hof/IMG_4353.JPG)" data-lightbox="gallery">
+        
+      </a>
+      <a href="img/hof/IMG_4354.JPG" style="background-image: url(img/hof/IMG_4354.JPG)" data-lightbox="gallery">
+        
+      </a>
+      <a href="img/hof/IMG_4356.JPG" style="background-image: url(img/hof/IMG_4356.JPG)" data-lightbox="gallery">
+        
+      </a>
+      <a href="img/hof/IMG_4357.JPG" style="background-image: url(img/hof/IMG_4357.JPG)" data-lightbox="gallery">
+        
+      </a>
+      <a href="img/hof/IMG_4358.JPG" style="background-image: url(img/hof/IMG_4358.JPG)" data-lightbox="gallery">
+        
+      </a>
+      <a href="img/hof/IMG_4369.JPG" style="background-image: url(img/hof/IMG_4369.JPG)" data-lightbox="gallery">
+        
+      </a>
+      <a href="img/hof/IMG_4370.JPG" style="background-image: url(img/hof/IMG_4370.JPG)" data-lightbox="gallery">
+        
+      </a>
+      <a href="img/hof/IMG_4371.JPG" style="background-image: url(img/hof/IMG_4371.JPG)" data-lightbox="gallery">
+        
+      </a>
+      <a href="img/hof/IMG_4372.JPG" style="background-image: url(img/hof/IMG_4372.JPG)" data-lightbox="gallery">
+        
+      </a>
+      <a href="img/hof/IMG_4373.JPG" style="background-image: url(img/hof/IMG_4373.JPG)" data-lightbox="gallery">
+        
+      </a>
+      <a href="img/hof/IMG_4375.JPG" style="background-image: url(img/hof/IMG_4375.JPG)" data-lightbox="gallery">
+        
+      </a>
+      <a href="img/hof/IMG_4376.JPG" style="background-image: url(img/hof/IMG_4376.JPG)" data-lightbox="gallery">
+        
+      </a>
+      <a href="img/hof/IMG_4377.JPG" style="background-image: url(img/hof/IMG_4377.JPG)" data-lightbox="gallery">
+        
+      </a>
+      <a href="img/hof/IMG_4378.JPG" style="background-image: url(img/hof/IMG_4378.JPG)" data-lightbox="gallery">
+        
+      </a>
+      <a href="img/hof/IMG_4379.JPG" style="background-image: url(img/hof/IMG_4379.JPG)" data-lightbox="gallery">
+        
+      </a>
+      <a href="img/hof/IMG_4381.JPG" style="background-image: url(img/hof/IMG_4381.JPG)" data-lightbox="gallery">
+        
+      </a>
+      <a href="img/hof/IMG_4382.JPG" style="background-image: url(img/hof/IMG_4382.JPG)" data-lightbox="gallery">
+        
+      </a>
+      <a href="img/hof/IMG_4383.JPG" style="background-image: url(img/hof/IMG_4383.JPG)" data-lightbox="gallery">
+        
+      </a>
+      <a href="img/hof/IMG_4384.JPG" style="background-image: url(img/hof/IMG_4384.JPG)" data-lightbox="gallery">
+        
+      </a>
 
     </div>
+    <div class="big-black-band">
+      <div class="slide-2-text text-band">
+        <img src="img/camera.png" class="icon">
+        <h2>Take your pic</h2>
+        <p>Snap a shot or choose a photo from your camera roll or facebook</p>
+      </div>
     
-    <script type="text/javascript" src="http://ignition.launchrock.com/ignition-current.min.js"></script>
-    <script src="js/jquery.fancybox.js"></script>
-    <script src="js/jquery.fancybox-media.js"></script>
-    <script>
-    $(document).ready(function(){
-
-      $('.fancybox').fancybox({
-        type: 'iframe',
-        padding: 0,
-        helpers: {
-            media: {}
-        }
-      });
-    });
-    </script>
-  </body>
+      <div class="slide-3-text text-band">
+        <div class="left-half">
+          <img src="img/pencil.png" class="icon">
+          <h2 class="yellow">
+            Add your flare
+          </h2>
+          <p>Edit and collage to create your own masterpiece</p>
+        </div>
+        <div class="right-half">
+          <img src="img/lightning.png" class="icon">
+          <h2 class="yellow">
+            Remix with friends
+          </h2>
+          <p>Send your photo and let the creativity flow</p>
+        </div>
+      </div>
+    
+      <div class="slide-4-text text-band">
+        <img src="img/trophy.png" class="icon">
+        <h2>Share and discover</h2>
+        <p>Submit your photo to the Hall of Fame and discover what other artists are creating with PicZag</p>
+      </div>
+    </div>
+    <!--
+    <div class="black-band">
+      <div class="restrict-width">
+        <table>
+          <tr>
+            <td>
+              <img src="img/trophy.png" class="icon">
+            </td>
+            <td>
+              <h2>Share and discover</h2>
+              <p>Submit your photo to the Hall of Fame and discover what other artists are creating with PicZag</p>
+            </td>
+          </tr>
+        </table>
+        
+      </div>
+    </div>
+    -->
+  </div>
+  <div class="slide last-slide-background">
+  </div>
+  <div class="slide last-slide">
+    <div class="restrict-width">
+      <div class="content">
+        <a href="https://itunes.apple.com/us/app/zag-edit-photos-with-friends/id891439625?mt=8" class="download-link"><img src="img/download.png" alt="Download on the App Store"></a>
+        <h2>Come hang with us.</h2>
+        <div class="social-icons">
+          <a href="#"><img src="img/instagram.png" alt="Instagram"></a>
+          <a href="#"><img src="img/twitter.png" alt="Twitter"></a>
+          <a href="#"><img src="img/facebook.png" alt="Facebook"></a>
+          <a href="#"><img src="img/pinterest.png" alt="Pinterest"></a>
+          <a href="#"><img src="img/tumblr.png" alt="Tumblr"></a>
+        </div>
+        <footer>
+          <a href="http://zagapp.tumblr.com/">Blog</a> / <a href="http://www.fastcompany.com/3033871/zag-turns-your-photos-into-conversations#2">Press</a> / <a href="malito:info@piczag.com">info@piczag.com</a> / <a href="mailto:team@piczag.com">Support</a>
+        </footer>
+        <p>&copy;PicZag 2014</p>
+      </div>
+    </div>
+    
+  </div>
+</body>
 </html>

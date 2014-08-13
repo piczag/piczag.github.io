@@ -1,20 +1,11 @@
 @import "compass/css3";
-
+@import "animation";
 
 $white: #fff;
 $black: #000;
 $pink: #ff3366;
 $yellow: #ffff33;
 
-html {
-  width: 100%;
-  height: 100%;
-  font-family: 'Helvetica Neue', 'Lato', 'Verdana', sans-serif;
-  background-image: url(../images/background-teal.png);
-  background-repeat: no-repeat;
-  @include background-size(cover);
-  background-position: center center;
-}
 html, body, ul, li, ol, a, p, h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
@@ -22,9 +13,12 @@ html, body, ul, li, ol, a, p, h1, h2, h3, h4, h5, h6 {
 }
 
 body {
-  
-  height: 100%;
-  width: 100%;
+  font-family: 'Helvetica Neue', 'Lato', 'Verdana', sans-serif;
+
+}
+h2 {
+  font-weight: normal;
+
 }
 
 .clearfix:after {
@@ -41,12 +35,17 @@ body {
   max-width: 900px;
 }
 
-
-.piczag-logo {
-  display: block;
-  width: 82%;
-  margin: -31px auto 0;
+.slide {
+  height: 500px;
+  position: relative;
+  overflow: hidden;
 }
+
+.image-gallery-slide, .first-slide {
+  background: url(../img/background-teal.png) no-repeat center center;
+  background-size: cover;
+}
+
 .iphone {
   width: 200px;
   height: auto;
@@ -56,10 +55,10 @@ body {
     width: 100%;
   }
   .big-screen {
-    width: 85.2%;
-    height: 71.3%;
-    top: 14.7%;
-    left: 8.5%;
+    width: 75%;
+    height: 67.3%;
+    top: 15.8%;
+    left: 13.5%;
   }
   .screen {
     top: 14.7%;
@@ -81,14 +80,28 @@ body {
 }
 
 .first-slide {
-  height: 100%;
-  width: 100%;
+  .bottom-bar {
+    width: 100%;
+    position: absolute;
+    height: 3em;
+    line-height: 3em;
+    bottom: 0;
+    left: 0;
+    text-align: left;
+    a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 1em;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
   .iphone {
     position: absolute;
     right: 3%;
     height: auto;
     width: 35%;
-    max-width: 270px;
     top: 50%;
     margin-top: -261.5px;
     &> img {
@@ -104,10 +117,10 @@ body {
     }
     .play-button {
       position: absolute;
-      top: 140px;
-      left: 0;
+      top: 50%;
+      left: 5px;
       width: 90%;
-      margin: 0 2% 0 8%;
+      margin: -134.5px 2% 0 8%;
       z-index: 3;
       filter: alpha(opacity=80);
       opacity: 0.8;
@@ -136,12 +149,7 @@ body {
   h2 {
     color: $white;
     margin: 0;
-    padding: 0 0 0.5em;
-    &.yellow {
-      color: $yellow;
-      margin: 1em auto 0.5em;
-      padding: 0;
-    }
+    font-size: 40px;
   }
   .download-link {
     margin-top: 3em;
@@ -151,138 +159,328 @@ body {
     vertical-align: middle;
     text-align: center;
     padding-right: 38%;
+    .logo {
+      width: 85%;
+      margin: -30px auto -36px;
+    }
   }
 }
 
-
-
-.social-icons {
-  text-align: center;
-  margin-bottom: 2em;
-  &> a {
-    display: inline-block;
-    width: 3em;
-    @include transition(all 0.2s);
-    img {
-      width: 100%;
-    }
-    &:hover {
-      filter: alpha(opacity=90);
-      opacity: 0.9;
-    }
-
-  }
-}
-
-.content {
-  height: 100%;
-  h1 {
-    line-height: 1em;
-    margin-top: 0;
+.big-black-band {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 12em;
+  z-index: 2;
+  background: #000;
+  filter: alpha(opacity=75);
+  opacity: 0.75;
+  left: -100%;
+  @include transition(all 0.5s);
+  &.sticky {
+    position: fixed;
   }
   p {
-    margin: 1em auto;
+    color: $white;
+    font-size: 1.2em;
+    margin-top: 0.5em;
   }
-}
+  h2 {
+    font-size: 2.1em;
+    margin: 1em 0 0;
+    color: $pink;
+    &.yellow {
+      color: $yellow;
+    }
+  }
+  .icon {
+    height: 6em;
+    margin: 3em 1em;
+  }
+  .slide-2-text {
+    width: 65%;
+    left: 30%;
 
-
-
-#lr-widget {
-  width: 100%;
-  margin: 0 auto 6em;
-  position: relative;
-  .LR-content {
-    max-width: 100% !important;  
   }
-  .LR-box-wrapper {
-    width: 90% !important;
-    margin: 0 auto !important;
+  .slide-3-text, .slide-4-text {
+    left: -100%;
   }
-  input[type="email"].LR-sign-up-input {
-    width: 75% !important;
-  }
-  input[type="submit"].LR-sign-up-submit {
+  .text-band {
     position: absolute;
+    
+    width: 65%;
+  }
+}
+.slide-2-text {
+  .icon {
+    float: right;
+  }
+}
+.slide-3-text {
+  .left-half, .right-half {
+    width: 35%;
+    margin: 0 2%;
+  }
+  h2 {
+    font-size: 2em;
+  }
+  p {
+    font-size: 1.05em;
+  }
+  .icon {
+    margin: 3em 0;
+  }
+  .left-half {
+    float: left;
+    text-align: right;
+    .icon {
+      float: left;
+    }
+  }
+  .right-half {
+    float: right;
+    .icon {
+      float: right;
+    }
+  }
+}
+.slide-4-text {
+  text-align: right;
+  left: 5%;
+  .icon {
+    float: left;
+  }
+}
+.black-band {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  bottom: 0;
+  background: rgba(0,0,0,0.9);
+  p {
+    color: $white;
+    margin: 0.5em 0 2em;
+  }
+  h2 {
+    color: $pink;
+    margin: 1em 0 0;
+    &.yellow {
+      color: $yellow;
+    }
   }
 }
 
+.icon {
+  filter: alpha(opacity=83);
+  opacity: 0.83;     
+}
 
-@media (min-width: 855px) {
-  .piczag-logo {
-    margin: -30px auto -36px;
+.second-slide {
+  background: url(../img/background-slide-2.png) no-repeat center center;
+  background-size: cover;
+  .iphone {
+    position: absolute;
+    bottom: 20px;
+    z-index: 3;
+    width: 30%;
+  }
+  table {
+    margin-left: 33%;
+    .icon {
+      width: 85%;
+    }
   }
 }
 
-@media (max-width: 608px) {
-  html {
+.main-iphone {
+  position: absolute;
+  bottom: 20px;
+  left: 70%;
+  left: -50%;
+  width: 27%;
+  z-index: 1;
+  max-width: 270px;
+  @include transition(all 0.5s);
+  height: auto;
+  &> img {
     height: auto;
-    width: auto;
+    width: 100%;
   }
-  .piczag-logo {
-    width: 95%;
+  &.sticky {
+    position: fixed;
   }
-  .first-slide {
-    .content {
-      display: block;
-      width: 90%;
-      padding: 0;
-      margin: 0 auto;
+  .screen {
+    position: absolute;
+    top: 15.5%;
+    left: 13.5%;
+    width: 75%;
+    height: 71.5%;
+    img {
+      width: 100%;
+      position: absolute;
+      @include transition(all 0.4s);
     }
-    .iphone {
-      position: relative;
-      margin: 2em auto;
-      width: 80%;
+    &.screen-3, &.screen-4 {
+      filter: alpha(opacity=0);
+      opacity: 0;
     }
-    &>.restrict-width {
-      padding-bottom: 17em;
-      padding-top: 3em;
+  }
+}
+
+.image-gallery-slide {
+  margin-bottom: 100%;
+  .restrict-width {
+    z-index: 3;
+    pointer-events: none;
+    position: relative;
+  }
+  .iphone {
+    position: absolute;
+    right: 0;
+    left: 70%;
+    bottom: 20px;
+    width: 30%;
+  }
+  table {
+    margin-right: 33%;
+    .icon {
+      width: 85%;
     }
-    h2 {
-      padding: 1em 0 0;
-      &.yellow {
-        position: absolute;
-        bottom: 4em;
-        width: 90%;
+  }
+  .restrict-width {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.third-slide {
+  background: url(../img/background-slide-3.png) no-repeat center top;
+  background-size: cover;
+  z-index: 0;
+  .iphone {
+    position: absolute;
+    z-index: 3;
+    left: 50%;
+    margin-left: -95.5px;
+    bottom: 20px;
+    width: 30%;
+  }
+  .icon {
+    height: 50px;
+  }
+  .iphone-padding {
+    width: 30%;
+  }
+  table {
+    &.left {
+      width: 50%;
+      float: left;
+      padding-right: 16.5%;
+      text-align: right;
+    }
+    &.right {
+      width: 50%;
+      float: right;
+      padding-left: 16.5%;
+    }
+  }
+}
+
+.download-link {
+  display: inline-block;
+  @include transition(all 0.2s);
+  &:hover {
+    @include transform(scale(1.1));
+
+  }
+  img {
+    width: 200px;
+  }
+}
+
+.last-slide-background {
+  background: url(../img/background-teal.png) no-repeat center center;
+  background-size: cover;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  bottom: 0;
+
+}
+
+.last-slide {
+  text-align: center;
+  position: fixed;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  z-index: -1;
+  width: 100%;
+  top: 0;
+  left: 0;
+  .restrict-width {
+    display: table;
+  }
+  .content {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  h2 {
+    color: $yellow;
+    margin: 1em auto 0.5em;
+  }
+  .download-link {
+    margin-bottom: 2em;
+  }
+  footer {
+    margin: 2em auto;
+  }
+  a {
+    color: $black;
+    text-decoration: none;
+  }
+  .social-icons {
+    text-align: center;
+    margin-bottom: 2em;
+    &> a {
+      display: inline-block;
+      width: 3em;
+      @include transition(all 0.2s);
+      img {
+        width: 100%;
+      }
+      &:hover {
+        filter: alpha(opacity=90);
+        opacity: 0.9;
       }
     }
   }
-
-  .social-icons {
-    position: absolute;
-    bottom: 0;
-    width: 90%;
-  }
-  #lr-widget {
-    margin: 0 auto 5em;
-    position: absolute;
-    bottom: 11em;
-    width: 90%;
-  }
 }
 
-@media (max-width: 480px) {
-  .content {
-    top: 25px;
-    margin-right: 0;
-    right: 25px;
-    margin-top: 0;
-    min-width: 150px;
-    p {
-      font-size: 18px;
-      margin: 0.5em auto;
-    }
+.slide-indicators {
+  position: fixed;
+  
+  right: 3%;
+  top: 50%;
+  z-index: 5;
+  margin-top: -95px;
+  .dots {
+    
   }
-
-  #lr-widget {
-    input[type="email"].LR-sign-up-input {
-      width: 80% !important;
-      padding: 8px !important;
-      font-size: 13px;
+  a {
+    display: block;
+    @include transition(all 0.5s);
+    width: 10px;
+    height: 10px;
+    @include border-radius(20px);
+    border: 2px solid rgba(255,255,255,0.83);
+    margin: 20px 0;
+    &.highlighted {
+      background: rgba(255,255,255,0.83);
     }
-    input[type="submit"].LR-sign-up-submit {
-      font-size: 13px;
-      min-width: 40px;
-      padding: 8px 1px !important;
+    &:hover {
+      background: rgba(255, 255, 255, 0.4);
+      cursor: pointer;
     }
   }
 }
